@@ -288,7 +288,28 @@ cat("합계 : ", sum(a+b+c), "평균 : ", mean(d) , "등급 : " ,grade2(100,90,1
 
 
 
+grade3 <- function(a,b,c){
+  
+  k <- c(a,b,c)
+  
+  avg <- mean(k)
+  
+  div <- toString(avg %/% 10)
+  
+  return(
+    switch (div,
+            '10' = "A",
+            '9' = "A",
+            '8' = "B",
+            '7' = "C",
+            '6' = "D",
+            '5' = "E",
+            "F"
+    )
+  )
+}
 
+grade3(100,90,100)
 
 
 
